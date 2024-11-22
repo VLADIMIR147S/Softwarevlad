@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio de Sesión</title>
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #f2f2f2;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+      }
+      .login-container {
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          width: 300px;
+          text-align: center;
+      }
+      .login-container input[type="text"],
+      .login-container input[type="password"] {
+          width: 80%;
+          padding: 8px;
+          margin: 10px 0;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          font-size: 0.9em;
+      }
+      .login-container button {
+          width: 100%;
+          padding: 10px;
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+      }
+      .login-container button:hover {
+          background-color: #45a049;
+      }
+    </style>
+    <script>
+      function showMainContent() {
+          document.querySelector('.login-container').style.display = 'none';
+          document.querySelector('.navbar').style.display = 'flex';
+          document.querySelector('.content').style.display = 'block';
+      }
+    </script>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Inicio de Sesión</h2>
+      <form onsubmit="event.preventDefault(); showMainContent();">
+        <input
+          type="text"
+          name="username"
+          placeholder="Usuario"
+          value="VLADIMIR SAHAGUN"
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Contraseña"
+          value="140206"
+          required
+        />
+        <button type="submit">Ingresar</button>
+      </form>
+    </div>
+    <div class="navbar" style="display: none;">
+      <a href="#inicio">INICIO</a>
+      <a href="#calculadora">CALCULADORA DE GASTOS</a>
+      <a href="#nominas">NOMINAS</a>
+      <a href="#compras">COMPRAS</a>
+      <a href="#ingresos">INGRESOS</a>
+      <a href="#graficos">GRAFICOS EN BARRAS</a>
+      <a href="#total">TOTAL</a>
+      <a href="#cerrar">CERRAR SESION</a>
+    </div>
+    <div class="content" style="display: none;">
+      <h2>Bienvenido a tu Panel de Control</h2>
+      <p>Selecciona una opción en la barra de navegación para comenzar.</p>
+    </div>
+  </body>
+</html>
+
